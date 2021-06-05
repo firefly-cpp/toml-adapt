@@ -1,0 +1,48 @@
+.TH TOML\-ADAPT "1" "June 2021" "" "User Commands"
+.SH NAME
+toml\-adapt \- adapt TOML files
+.SH SYNOPSIS
+.B toml\-adapt
+.RB [ \-h ]
+.RB [ \-path\ \fIPATH ]
+.RB [ \-a\  { change , add , remove }]
+.RB [ \-dep\ \fIDEP ]
+.RB [ \-ver\ \fIVER ]
+.\" .SH DESCRIPTION
+.SH OPTIONS
+.TP
+.BR \-h ,\  \-\-help
+Show a help message and exit
+.TP
+.B \-path\ \fIPATH
+Path to the
+.B .toml
+file
+.TP
+.BR \-a \ { change , add , remove }
+Select action
+.TP
+.B \-dep\ \fIDEP
+Dependency name
+.TP
+.B \-ver\ \fIVER
+Version of dependency
+.SH EXAMPLES
+.TP
+.B Change dependency
+.IP
+.EX
+.B toml\-adapt \-path\ \fIpyproject.toml\fB \-a\ change \-dep\ \fIniaclass\fB \-ver\ \fI0.1.0
+.EE
+.TP
+.B Add dependency
+.IP
+.EX
+.B toml\-adapt \-path\ \fIpyproject.toml\fB \-a\ add \-dep\ \fIniaclass\fB \-ver\ \fI0.1.0
+.EE
+.TP
+.B Remove dependency
+.IP
+.EX
+.B toml\-adapt \-path\ \fIpyproject.toml\fB \-a\ remove \-dep\ \fIniaclass\fB \-ver\ \fI0.1.0
+.EE
