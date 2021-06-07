@@ -57,6 +57,5 @@ class ManipulateToml():
             self.remove_dep(dependency)
 
     def dump_to_file(self):
-        output_file_name = "rez/pyproject.toml"
-        with open(output_file_name, "w") as toml_file:
+        with open(self.path, "w") as toml_file:
             toml.dump(self.data, toml_file)
