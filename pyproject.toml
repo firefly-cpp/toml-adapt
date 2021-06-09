@@ -3,7 +3,7 @@ name = "toml-adapt"
 version = "0.1.1"
 description = ""
 authors = ["iztokf <iztokf@fedoraproject.org>"]
-include = ["toml-adapt.1"]
+include = [ { path = "toml-adapt.1", format = "sdist" } ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
