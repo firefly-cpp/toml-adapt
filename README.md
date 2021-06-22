@@ -3,7 +3,7 @@
 ---
 
 ## Description
-This is a very simple package for manipulating toml format files. This is still a work in progress. Recent version of this package support the manipulation of dependencies that are included in toml files.
+This is a very simple package for manipulating toml format files. This is still a work in progress. Recent version of this package supports the manipulation of dependencies that are included in toml files.
 
 ## Usage
 
