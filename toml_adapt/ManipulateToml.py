@@ -31,6 +31,9 @@ class ManipulateToml():
     def get_dependencies(self):
         return (self.data['tool'][self.primary_tool]['dependencies'])
 
+    def get_names_of_dependencies(self):
+        return list(self.get_dependencies().keys())
+
     def get_number_of_dependencies(self):
         return len(self.get_dependencies())
 
@@ -38,7 +41,12 @@ class ManipulateToml():
         if version == "X":
             version = "*"
 
-        self.data['tool'][self.primary_tool]['dependencies'][dependency] = version
+        if dependency == "ALL":
+            all_deps = self.get_names_of_dependencies()
+            for i in range(len(all_deps)):
+                self.data['tool'][self.primary_tool]['dependencies'][all_deps[i]] = version
+        else:
+            self.data['tool'][self.primary_tool]['dependencies'][dependency] = version
 
     def remove_dep(self, dependency):
         data = self.get_dependencies()

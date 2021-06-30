@@ -21,3 +21,11 @@ toml-adapt -path pyproject.toml -a add -dep niaclass -ver 0.1.0
 ```sh
 toml-adapt -path pyproject.toml -a remove -dep niaclass -ver 0.1.0
 ```
+
+### Other examples
+
+Change all existing dependencies in toml file
+```sh
+toml-adapt -path pyproject.toml -a change -dep ALL -ver X
+```
+X represents a *
