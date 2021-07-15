@@ -1,9 +1,10 @@
 import argparse
 import sys
 from toml_adapt.ManipulateToml import ManipulateToml
+from toml_adapt.ChangeLine import ChangeLine
 
 def start():
-    parser = argparse.ArgumentParser(description='TOML manipulate')
+    parser = argparse.ArgumentParser(description='Manipulate .toml files')
 
     parser.add_argument('-path',
         type=str,
@@ -35,12 +36,18 @@ def start():
     action = arguments.a
     dependency = arguments.dep
     version = arguments.ver
-    old = arguments.old
-    new = arguments.new
+    old_line = arguments.old
+    new_line = arguments.new
 
-    a = ManipulateToml(path, action, dependency, version, old, new)
+    toml_manipulations = ['change', 'add', 'remove']
+    other_manipulations = ['change-line']
 
-    a.make_action()
+    if action in toml_manipulations:
+        a = ManipulateToml(path, action, dependency, version)
+        a.make_action()
+    elif action in other_manipulations:
+        a = ChangeLine(path, action, old_line, new_line)
+        a.change_line()
 
     if action in ['change', 'add', 'remove']:
         a.dump_to_file()

@@ -1,0 +1,4 @@
+NiaPy
+niaclass
+numpy
+scipy
