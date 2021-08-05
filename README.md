@@ -5,6 +5,24 @@
 ## Description
 This is a very simple package for manipulating toml format files. This is still a work in progress. Recent version of this package supports the manipulation of dependencies that are included in toml files.
 
+## Installation
+
+### pip3
+
+Install toml-adapt with pip3:
+
+```sh
+pip3 install toml-adapt
+```
+
+### Fedora Linux
+
+To install toml-adapt on Fedora, use:
+
+```sh
+$ dnf install python-toml-adapt
+```
+
 ## Usage
 
 ### Change dependency
@@ -29,3 +47,14 @@ Change all existing dependencies in toml file
 toml-adapt -path pyproject.toml -a change -dep ALL -ver X
 ```
 X represents a *
+
+### How to use it in SPEC files?
+
+```sh
+%prep
+...
+	
+# Make dependencies consistent with Fedora dependencies
+	
+toml-adapt -path pyproject.toml -a change -dep ALL -ver X
+```
