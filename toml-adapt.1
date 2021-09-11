@@ -8,7 +8,11 @@ toml\-adapt \- adapt TOML files
 .RB [ \-a\  { change , add , remove }]
 .RB [ \-dep\ \fIDEP ]
 .RB [ \-ver\ \fIVER ]
-.\" .SH DESCRIPTION
+.SH DESCRIPTION
+This is a very simple package for manipulating toml format files.
+This is still a work in progress.
+Recent version of this package supports the manipulation of dependencies that
+are included in toml files.
 .SH OPTIONS
 .TP
 .BR \-h ,\  \-\-help
@@ -45,4 +49,22 @@ Version of dependency
 .IP
 .EX
 .B toml\-adapt \-path\ \fIpyproject.toml\fB \-a\ remove \-dep\ \fIniaclass\fB \-ver\ \fI0.1.0
+.EE
+.SS "OTHER EXAMPLES"
+.TP
+.B Change all existing dependencies in toml file
+.IP
+.EX
+.B toml\-adapt \-path\ \fIpyproject.toml\fB \-a\ change \-dep\ ALL \-ver\ X
+.EE
+.B X
+represents a
+.B *
+.SS "HOW TO USE IT IN SPEC FILES?"
+.IP
+.EX
+.B %prep
+.B ...
+.B # Make dependencies consistent with Fedora dependencies
+.B toml\-adapt \-path\ \fIpyproject.toml\fB \-a\ change \-dep\ ALL \-ver\ X
 .EE
