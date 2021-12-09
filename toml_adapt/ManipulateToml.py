@@ -66,6 +66,15 @@ class ManipulateToml():
             print("Dependency is not present in current dependency list!")
 
         return data
+    
+    def remove_dev_dep(self, dependency):
+        data = self.get_dev_dependencies()
+        try:
+            data.pop(dependency)
+        except KeyError:
+            print("Dependency is not present in current dependency list!")
+
+        return data
 
     def add_dep(self, dependency, version):
         data = self.get_dependencies()
@@ -92,6 +101,8 @@ class ManipulateToml():
             self.remove_dep(self.dependency)
         elif self.action == "add-dev":
             self.add_dev_dep(self.dependency, self.version)
+        elif self.action == "remove-dev":
+            self.remove_dev_dep(self.dependency)
 
     def dump_to_file(self):
         with open(self.path, "w") as toml_file:
