@@ -38,6 +38,9 @@ class ManipulateToml():
 
     def get_names_of_dependencies(self):
         return list(self.get_dependencies().keys())
+    
+    def get_names_of_dev_dependencies(self):
+        return list(self.get_dev_dependencies().keys())
 
     def get_versions_of_dependencies(self):
         return list(self.get_dependencies().values())
@@ -57,6 +60,16 @@ class ManipulateToml():
                 self.data['tool'][self.primary_tool]['dependencies'][all_deps[i]] = version
         else:
             self.data['tool'][self.primary_tool]['dependencies'][dependency] = version
+            
+    def change_dev_dep_version(self, dependency, version):
+        if version == "X":
+            version = "*"
+        if dependency == "ALL":
+            all_deps = self.get_names_of_dev_dependencies()
+            for i in range(len(all_deps)):
+                self.data['tool'][self.primary_tool]['dev-dependencies'][all_deps[i]] = version
+        else:
+            self.data['tool'][self.primary_tool]['dev-dependencies'][dependency] = version
 
     def remove_dep(self, dependency):
         data = self.get_dependencies()
@@ -95,6 +108,8 @@ class ManipulateToml():
     def make_action(self):
         if self.action == "change":
             self.change_dep_version(self.dependency, self.version)
+        elif self.action == "change-dev":
+            self.change_dev_dep_version(self.dependency,self.version)
         elif self.action == "add":
             self.add_dep(self.dependency, self.version)
         elif self.action == "remove":
@@ -103,6 +118,7 @@ class ManipulateToml():
             self.add_dev_dep(self.dependency, self.version)
         elif self.action == "remove-dev":
             self.remove_dev_dep(self.dependency)
+            
 
     def dump_to_file(self):
         with open(self.path, "w") as toml_file:
