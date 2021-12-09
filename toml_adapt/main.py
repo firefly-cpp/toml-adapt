@@ -11,7 +11,7 @@ def start():
         help="Path to the .toml file")
 
     parser.add_argument('-a',
-        choices=['change', 'add', 'remove', 'change-line'],
+        choices=['change', 'add','add-dev', 'remove', 'change-line'],
         help="Select action")
 
     parser.add_argument('-dep',
@@ -39,7 +39,7 @@ def start():
     old_line = arguments.old
     new_line = arguments.new
 
-    toml_manipulations = ['change', 'add', 'remove']
+    toml_manipulations = ['change', 'add','add-dev', 'remove']
     other_manipulations = ['change-line']
 
     if action in toml_manipulations:
@@ -49,5 +49,5 @@ def start():
         a = ChangeLine(path, action, old_line, new_line)
         a.change_line()
 
-    if action in ['change', 'add', 'remove']:
+    if action in ['change', 'add','add-dev', 'remove']:
         a.dump_to_file()
