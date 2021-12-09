@@ -54,22 +54,24 @@ class ManipulateToml():
     def change_dep_version(self, dependency, version):
         if version == "X":
             version = "*"
+        dependencies_dict=self.data['tool'][self.primary_tool]['dependencies']
         if dependency == "ALL":
             all_deps = self.get_names_of_dependencies()
             for i in range(len(all_deps)):
-                self.data['tool'][self.primary_tool]['dependencies'][all_deps[i]] = version
+                dependencies_dict[all_deps[i]] = version
         else:
-            self.data['tool'][self.primary_tool]['dependencies'][dependency] = version
+            dependencies_dict[dependency] = version
             
     def change_dev_dep_version(self, dependency, version):
         if version == "X":
             version = "*"
+        dev_dependencies_dict=self.data['tool'][self.primary_tool]['dev-dependencies']
         if dependency == "ALL":
             all_deps = self.get_names_of_dev_dependencies()
             for i in range(len(all_deps)):
-                self.data['tool'][self.primary_tool]['dev-dependencies'][all_deps[i]] = version
+                dev_dependencies_dict[all_deps[i]] = version
         else:
-            self.data['tool'][self.primary_tool]['dev-dependencies'][dependency] = version
+            dev_dependencies_dict[dependency] = version
 
     def remove_dep(self, dependency):
         data = self.get_dependencies()
