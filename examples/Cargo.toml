@@ -1,0 +1,193 @@
+[[test]]
+name = "test_server"
+required-features = [ "compress-brotli", "compress-gzip", "compress-zstd", "cookies",]
+
+[[example]]
+name = "basic"
+required-features = [ "compress-gzip",]
+
+[[example]]
+name = "uds"
+required-features = [ "compress-gzip",]
+
+[[example]]
+name = "on_connect"
+required-features = []
+
+[[bench]]
+name = "server"
+harness = false
+
+[[bench]]
+name = "service"
+harness = false
+
+[[bench]]
+name = "responder"
+harness = false
+
+[package]
+name = "actix-web"
+version = "4.0.0-beta.18"
+authors = [ "Nikolay Kim <fafhrd91@gmail.com>",]
+description = "Actix Web is a powerful, pragmatic, and extremely fast web framework for Rust"
+keywords = [ "actix", "http", "web", "framework", "async",]
+categories = [ "network-programming", "asynchronous", "web-programming::http-server", "web-programming::websocket",]
+homepage = "https://actix.rs"
+repository = "https://github.com/actix/actix-web.git"
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+[lib]
+name = "actix_web"
+path = "src/lib.rs"
+
+[workspace]
+resolver = "2"
+members = [ ".", "awc", "actix-http", "actix-files", "actix-multipart", "actix-web-actors", "actix-web-codegen", "actix-http-test", "actix-test", "actix-router",]
+
+[features]
+default = [ "compress-brotli", "compress-gzip", "compress-zstd", "cookies",]
+compress-brotli = [ "actix-http/compress-brotli", "__compress",]
+compress-gzip = [ "actix-http/compress-gzip", "__compress",]
+compress-zstd = [ "actix-http/compress-zstd", "__compress",]
+cookies = [ "cookie",]
+secure-cookies = [ "cookie/secure",]
+openssl = [ "actix-http/openssl", "actix-tls/accept", "actix-tls/openssl",]
+rustls = [ "actix-http/rustls", "actix-tls/accept", "actix-tls/rustls",]
+__compress = []
+experimental-io-uring = [ "actix-server/io-uring",]
+
+[dependencies]
+actix-codec = "0.4.1"
+actix-macros = "0.2.3"
+actix-rt = "2.3"
+actix-server = "2.0.0-rc.2"
+actix-service = "2.0.0"
+actix-utils = "3.0.0"
+actix-http = "3.0.0-beta.17"
+actix-router = "0.5.0-beta.3"
+actix-web-codegen = "0.5.0-beta.6"
+ahash = "0.7"
+bytes = "1"
+cfg-if = "1"
+derive_more = "0.99.5"
+encoding_rs = "0.8"
+itoa = "1"
+language-tags = "0.3"
+once_cell = "1.5"
+log = "0.4"
+mime = "0.3"
+pin-project-lite = "0.2.7"
+regex = "1.4"
+serde_json = "1.0"
+serde_urlencoded = "0.7"
+smallvec = "1.6.1"
+socket2 = "0.4.0"
+url = "2.1"
+trying = "1.2.3"
+automatic = "9.9.9"
+testing777 = "1.1.1"
+
+[dev-dependencies]
+brotli2 = "0.3.2"
+env_logger = "0.9"
+flate2 = "1.0.13"
+rand = "0.8"
+rcgen = "0.8"
+rustls-pemfile = "0.2"
+zstd = "0.9"
+
+[dependencies.actix-tls]
+version = "3.0.0"
+default-features = false
+optional = true
+
+[dependencies.cookie]
+version = "0.16"
+features = [ "percent-encode",]
+optional = true
+
+[dependencies.futures-core]
+version = "0.3.7"
+default-features = false
+
+[dependencies.futures-util]
+version = "0.3.7"
+default-features = false
+
+[dependencies.serde]
+version = "1.0"
+features = [ "derive",]
+
+[dependencies.time]
+version = "0.3"
+default-features = false
+features = [ "formatting",]
+
+[dev-dependencies.actix-test]
+version = "0.1.0-beta.10"
+features = [ "openssl", "rustls",]
+
+[dev-dependencies.awc]
+version = "3.0.0-beta.17"
+features = [ "openssl",]
+
+[dev-dependencies.criterion]
+version = "0.3"
+features = [ "html_reports",]
+
+[dev-dependencies.futures-util]
+version = "0.3.7"
+default-features = false
+features = [ "std",]
+
+[dev-dependencies.tls-openssl]
+package = "openssl"
+version = "0.10.9"
+
+[dev-dependencies.tls-rustls]
+package = "rustls"
+version = "0.20.0"
+
+[profile.dev]
+debug = 0
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+
+[patch.crates-io.actix-files]
+path = "actix-files"
+
+[patch.crates-io.actix-http]
+path = "actix-http"
+
+[patch.crates-io.actix-http-test]
+path = "actix-http-test"
+
+[patch.crates-io.actix-multipart]
+path = "actix-multipart"
+
+[patch.crates-io.actix-router]
+path = "actix-router"
+
+[patch.crates-io.actix-test]
+path = "actix-test"
+
+[patch.crates-io.actix-web]
+path = "."
+
+[patch.crates-io.actix-web-actors]
+path = "actix-web-actors"
+
+[patch.crates-io.actix-web-codegen]
+path = "actix-web-codegen"
+
+[patch.crates-io.awc]
+path = "awc"
+
+[package.metadata.docs.rs]
+features = [ "openssl", "rustls", "compress-brotli", "compress-gzip", "compress-zstd", "cookies", "secure-cookies",]
+rustdoc-args = [ "--cfg", "docsrs",]

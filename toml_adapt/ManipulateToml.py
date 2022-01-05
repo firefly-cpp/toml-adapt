@@ -1,127 +1,117 @@
-import toml
-import fileinput
-import sys
+from typing import Any, MutableMapping
+from Common import TomlBaseManipulation
+from DocumentOperations import DocumentOperationsEnum
+from DocumentType import DocumentTypeEnum
+from Match import FindMatch
+from AllShapes import all_shapes
+from Shape import Shape
+from ToolExtraction.ToolExtraction import IsFileCargo, IsFileFlit, IsFileJuliaPkg, IsFilePoetry
+from FlitActions import AddFlitDependency, RemoveFlitDependency
+from PoetryActions import AddPoetryDependency, AddPoetryDevDependency, RemovePoetryDevDependency
+from CargoActions import AddCargoDevDependency, RemoveCargoDependency, RemoveCargoDevDependency
+from PoetryActions import RemovePoetryDependency
 
-class ManipulateToml():
-    def __init__(self, path, action, dependency, version):
-        self.path = path
-        self.action = action
-        self.dependency = dependency
-        self.version = version
+def ExtractTool(toml_file_path: str) -> DocumentTypeEnum:    
+    options_list=[
+        IsFileFlit(toml_file_path),     DocumentTypeEnum.FLIT,
+        IsFilePoetry(toml_file_path),   DocumentTypeEnum.POETRY,
+        IsFileCargo(toml_file_path),    DocumentTypeEnum.CARGO,
+        IsFileJuliaPkg(toml_file_path), DocumentTypeEnum.JULIAPKG]
+    try:
+        return FindMatch(options_list,lambda check: check)
+    except:
+        raise Exception("Invalid document type.")
 
-        #load file
-        self.data = toml.load(self.path)
-        self.tools = []
-        self.get_tools()
-        self.project_name = self.get_project_name()
-        self.primary_tool = self.get_primary_tool()
 
-    def get_project_name(self):
-        #for poetry
-        if "poetry" in self.tools:
-            return self.data['tool']['poetry']['name']
+def AddCargoDependency(toml_file_path:str,
+                        dependency_name: str,
+                        dependency_version:str):
+    def cargo(toml_full_dict: MutableMapping[str,Any]):
+        toml_full_dict["dependencies"][dependency_name]=f"{dependency_version}"
+    TomlBaseManipulation(toml_file_path,cargo)
 
-    def get_primary_tool(self):
-        if "poetry" in self.tools:
-            return "poetry"
 
-    def get_tools(self):
-        for key, val in self.data.items():
-            for k, v in val.items():
-                self.tools.append(k)
-
-    def get_dependencies(self):
-        return (self.data['tool'][self.primary_tool]['dependencies'])
     
-    def get_dev_dependencies(self):
-        return (self.data['tool'][self.primary_tool]['dev-dependencies'])
-
-    def get_names_of_dependencies(self):
-        return list(self.get_dependencies().keys())
+def AddDependency(toml_file_path: str,
+                  dependency_name: str,
+                  dependency_version:str) -> None:
+    tool_used=ExtractTool(toml_file_path)
+    if(tool_used.POETRY):
+        AddPoetryDependency(toml_file_path,dependency_name,dependency_version)
+    if(tool_used.FLIT):
+        AddFlitDependency(toml_file_path,dependency_name,dependency_version)
+    if(tool_used.CARGO):
+        AddCargoDependency(toml_file_path,dependency_name,dependency_version)
+    if(tool_used.JULIAPKG):
+        pass # Probably not possible
     
-    def get_names_of_dev_dependencies(self):
-        return list(self.get_dev_dependencies().keys())
+def RemoveDependency(toml_file_path: str,
+                  dependency_name: str):
+    tool_used=ExtractTool(toml_file_path)
+    if(tool_used.POETRY):
+        RemovePoetryDependency(toml_file_path,dependency_name)
+    if(tool_used.FLIT):
+        RemoveFlitDependency(toml_file_path,dependency_name)
+    if(tool_used.CARGO):
+        RemoveCargoDependency(toml_file_path,dependency_name)
+    if(tool_used.JULIAPKG):
+        pass # Probably not possible
 
-    def get_versions_of_dependencies(self):
-        return list(self.get_dependencies().values())
-
-    def get_number_of_dependencies(self):
-        return len(self.get_dependencies())
-
-    def check_for_specific_version(self, version):
-        return self.get_versions_of_dependencies().count(version)
-
-    def change_dep_version(self, dependency, version):
-        if version == "X":
-            version = "*"
-        dependencies_dict=self.data['tool'][self.primary_tool]['dependencies']
-        if dependency == "ALL":
-            all_deps = self.get_names_of_dependencies()
-            for i in range(len(all_deps)):
-                dependencies_dict[all_deps[i]] = version
-        else:
-            dependencies_dict[dependency] = version
-            
-    def change_dev_dep_version(self, dependency, version):
-        if version == "X":
-            version = "*"
-        dev_dependencies_dict=self.data['tool'][self.primary_tool]['dev-dependencies']
-        if dependency == "ALL":
-            all_deps = self.get_names_of_dev_dependencies()
-            for i in range(len(all_deps)):
-                dev_dependencies_dict[all_deps[i]] = version
-        else:
-            dev_dependencies_dict[dependency] = version
-
-    def remove_dep(self, dependency):
-        data = self.get_dependencies()
-        try:
-            data.pop(dependency)
-        except KeyError:
-            print("Dependency is not present in current dependency list!")
-
-        return data
+def AddDevDependency(toml_file_path: str,
+                  dependency_name: str,
+                  dependency_version:str) -> None:
+    tool_used=ExtractTool(toml_file_path)
+    if(tool_used.POETRY):
+        AddPoetryDevDependency(toml_file_path,dependency_name,dependency_version)
+    if(tool_used.FLIT):
+        AddFlitDependency(toml_file_path,dependency_name,dependency_version)
+    if(tool_used.CARGO):
+        AddCargoDevDependency(toml_file_path,dependency_name,dependency_version)
+    if(tool_used.JULIAPKG):
+        pass # Probably not possible
     
-    def remove_dev_dep(self, dependency):
-        data = self.get_dev_dependencies()
-        try:
-            data.pop(dependency)
-        except KeyError:
-            print("Dependency is not present in current dependency list!")
+def RemoveDevDependency(toml_file_path: str,
+                  dependency_name: str):
+    tool_used=ExtractTool(toml_file_path)
+    if(tool_used.POETRY):
+        RemovePoetryDevDependency(toml_file_path,dependency_name)
+    if(tool_used.FLIT):
+        RemoveFlitDependency(toml_file_path,dependency_name)
+    if(tool_used.CARGO):
+        RemoveCargoDevDependency(toml_file_path,dependency_name)
+    if(tool_used.JULIAPKG):
+        pass # Probably not possible
 
-        return data
+def GetMatchingShape(toml_file_path:str):
+    for shape in all_shapes:
+        if(shape.DocumentType == ExtractTool(toml_file_path)):
+            return shape
+    raise Exception("Document type was not found.")
 
-    def add_dep(self, dependency, version):
-        data = self.get_dependencies()
-        if version == "X":
-            version = "*"
-
-        data[dependency] = version
-        return data
+def DoOperation(
+    operation: DocumentOperationsEnum,
+    toml_file_path: str = "pyproject.toml",
+    dependency_name: str = "",
+    dependency_version: str = ""
+):
+    """
+    Operation enum describes what operation should be done.
+    Toml file path is relative or absolute path to the toml file that should be manipulated.
+    Dependency name is the name of dependency that we wish to work with.
+    Dependency version is it's version.
     
-    def add_dev_dep(self, dependency, version):
-        data = self.get_dev_dependencies()
-        if version == "X":
-            version = "*"
-
-        data[dependency] = version
-        return data
-
-    def make_action(self):
-        if self.action == "change":
-            self.change_dep_version(self.dependency, self.version)
-        elif self.action == "change-dev":
-            self.change_dev_dep_version(self.dependency,self.version)
-        elif self.action == "add":
-            self.add_dep(self.dependency, self.version)
-        elif self.action == "remove":
-            self.remove_dep(self.dependency)
-        elif self.action == "add-dev":
-            self.add_dev_dep(self.dependency, self.version)
-        elif self.action == "remove-dev":
-            self.remove_dev_dep(self.dependency)
-            
-
-    def dump_to_file(self):
-        with open(self.path, "w") as toml_file:
-            toml.dump(self.data, toml_file)
+    When doing remove operation, the version can (and should) be omitted.
+    """
+    shape: Shape=GetMatchingShape(toml_file_path)
+    if(operation==DocumentOperationsEnum.ADD):
+        shape.AddDependencyFn(toml_file_path,dependency_name,dependency_version)
+    if(operation==DocumentOperationsEnum.REMOVE):
+        shape.RemoveDependencyFn(toml_file_path,dependency_name)
+    if(operation==DocumentOperationsEnum.CHANGE):
+        shape.ChangeDependencyFn(toml_file_path,dependency_name,dependency_version)
+    if(operation==DocumentOperationsEnum.ADD_DEV):
+        shape.AddDevDependencyFn(toml_file_path,dependency_name,dependency_version)
+    if(operation==DocumentOperationsEnum.REMOVE_DEV):
+        shape.RemoveDevDependencyFn(toml_file_path,dependency_name)
+    if(operation==DocumentOperationsEnum.CHANGE_DEV):
+        shape.ChangeDevDependencyFn(toml_file_path,dependency_name,dependency_version)
