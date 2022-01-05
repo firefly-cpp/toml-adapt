@@ -7,7 +7,7 @@ def AddPoetryDependency(toml_file_path:str,
                         dependency_name: str,
                         dependency_version:str):
     def poetry(toml_full_dict: MutableMapping[str,Any]):
-        toml_full_dict["tool"]["poetry"]["dependencies"][dependency_name]=f"^{dependency_version}"
+        toml_full_dict["tool"]["poetry"]["dependencies"][dependency_name]=f"{dependency_version}"
     TomlBaseManipulation(toml_file_path,poetry)
     
 def RemovePoetryDependency(toml_file_path:str,
@@ -28,7 +28,7 @@ def AddPoetryDevDependency(toml_file_path:str,
                         dependency_name: str,
                         dependency_version:str):
     def poetry(toml_full_dict: MutableMapping[str,Any]):
-        toml_full_dict["tool"]["poetry"]["dev-dependencies"][dependency_name]=f"^{dependency_version}"
+        toml_full_dict["tool"]["poetry"]["dev-dependencies"][dependency_name]=f"{dependency_version}"
     TomlBaseManipulation(toml_file_path,poetry)
     
 def RemovePoetryDevDependency(toml_file_path:str,
