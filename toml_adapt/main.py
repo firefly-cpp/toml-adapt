@@ -1,53 +1,35 @@
-import argparse
-import sys
-from toml_adapt.ManipulateToml import ManipulateToml
-from toml_adapt.ChangeLine import ChangeLine
+#AddDependency("Examples/poetry_pyproject.toml","automatic","9.9.9")
+#AddDependency("Examples/Cargo.toml","automatic","9.9.9")
+#AddDependency("Examples/flit_pyproject.toml","automatic","9.9.9")
 
-def start():
-    parser = argparse.ArgumentParser(description='Manipulate .toml files')
+#AddDevDependency("Examples/poetry_pyproject.toml","automatic-dev","9.9.9")
+#AddDevDependency("Examples/Cargo.toml","automatic-dev","9.9.9")
+#AddDevDependency("Examples/flit_pyproject.toml","automatic-dev","9.9.9")
 
-    parser.add_argument('-path',
-        type=str,
-        help="Path to the .toml file")
+#RemoveDependency("Examples/poetry_pyproject.toml","automatic")
+#RemoveDependency("Examples/Cargo.toml","automatic")
+#RemoveDependency("Examples/flit_pyproject.toml","automatic")
 
-    parser.add_argument('-a',
-        choices=['change','change-dev', 'add','add-dev', 'remove', 'remove-dev', 'change-line'],
-        help="Select action")
+#RemoveDevDependency("Examples/poetry_pyproject.toml","automatic-dev")
+#RemoveDevDependency("Examples/Cargo.toml","automatic-dev")
+#RemoveDevDependency("Examples/flit_pyproject.toml","automatic-dev")
 
-    parser.add_argument('-dep',
-        type=str,
-        help="Dependency name")
+from DocumentOperations import DocumentOperationsEnum
+from ManipulateToml import DoOperation
 
-    parser.add_argument('-ver',
-        type=str,
-        help="Version of dependency")
+operation: DocumentOperationsEnum=DocumentOperationsEnum.ADD
 
-    parser.add_argument('-old',
-        type=str,
-        help="Old line")
+DoOperation(operation,
+            toml_file_path="Examples/Cargo.toml",
+            dependency_name="testing777",
+            dependency_version="1.1.1")
 
-    parser.add_argument('-new',
-        type=str,
-        help="New line")
+DoOperation(operation,
+            toml_file_path="Examples/poetry_pyproject.toml",
+            dependency_name="testing777",
+            dependency_version="1.1.1")
 
-    arguments = parser.parse_args()
-
-    path = arguments.path
-    action = arguments.a
-    dependency = arguments.dep
-    version = arguments.ver
-    old_line = arguments.old
-    new_line = arguments.new
-
-    toml_manipulations = ['change','change-dev', 'add','add-dev', 'remove', 'remove-dev']
-    other_manipulations = ['change-line']
-
-    if action in toml_manipulations:
-        a = ManipulateToml(path, action, dependency, version)
-        a.make_action()
-    elif action in other_manipulations:
-        a = ChangeLine(path, action, old_line, new_line)
-        a.change_line()
-
-    if action in ['change','change-dev', 'add','add-dev', 'remove', 'remove-dev']:
-        a.dump_to_file()
+DoOperation(operation,
+            toml_file_path="Examples/flit_pyproject.toml",
+            dependency_name="testing777",
+            dependency_version="1.1.1")
