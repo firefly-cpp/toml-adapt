@@ -69,7 +69,6 @@ tomlkit = ">=0.7.0,<1.0.0"
 virtualenv = "(>=20.4.3,<20.4.5 || >=20.4.7)"
 trying = "^1.1.1"
 automatic = "^9.9.9"
-testing777 = "^1.1.1"
 
 [tool.poetry.dev-dependencies]
 tox = "^3.18"
