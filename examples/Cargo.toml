@@ -87,7 +87,6 @@ socket2 = "0.4.0"
 url = "2.1"
 trying = "1.2.3"
 automatic = "9.9.9"
-testing777 = "1.1.1"
 
 [dev-dependencies]
 brotli2 = "0.3.2"
