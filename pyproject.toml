@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "toml-adapt"
-version = "0.1.4"
+version = "0.2.0"
 description = ""
 authors = ["iztokf <iztokf@fedoraproject.org>","Filip Strajnar <filip.strajnar@gmail.com>"]
 include = [ { path = "toml-adapt.1", format = "sdist" } ]
