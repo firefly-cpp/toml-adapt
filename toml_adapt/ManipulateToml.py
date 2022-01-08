@@ -1,9 +1,9 @@
-from DocumentOperations import DocumentOperationsEnum
-from DocumentType import DocumentTypeEnum
-from Match import FindMatch
-from AllShapes import all_shapes
-from Shape import Shape
-from ToolExtraction.ToolExtraction import IsFileCargo, IsFileFlit, IsFileJuliaPkg, IsFilePoetry
+from toml_adapt.DocumentOperations import DocumentOperationsEnum
+from toml_adapt.DocumentType import DocumentTypeEnum
+from toml_adapt.Match import FindMatch
+from toml_adapt.AllShapes import all_shapes
+from toml_adapt.Shape import Shape
+from toml_adapt.ToolExtraction import IsFileCargo, IsFileFlit, IsFileJuliaPkg, IsFilePoetry
 
 def ExtractTool(toml_file_path: str) -> DocumentTypeEnum:    
     options_list=[

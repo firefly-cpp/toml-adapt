@@ -1,6 +1,6 @@
 from typing import Callable
 
-from DocumentType import DocumentTypeEnum
+from toml_adapt.DocumentType import DocumentTypeEnum
 
 class Shape:
     def __init__(self,
