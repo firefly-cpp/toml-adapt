@@ -21,7 +21,7 @@ CLI currently supports the following operations:
 
 - adding/removing dependencies
 - changing the  dependency version
-- changing the dependecy versions of all packages concurrently
+- changing the dependency versions of all packages concurrently
 - adding/removing/changing dev dependencies
 
 ### Supported packaging tools
