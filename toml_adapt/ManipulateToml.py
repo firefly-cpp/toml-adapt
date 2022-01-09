@@ -36,8 +36,6 @@ def DoOperation(
     
     When doing remove operation, the version can (and should) be omitted.
     """
-    if dependency_version=="ANY":
-        dependency_version="*"
     shape: Shape=GetMatchingShape(toml_file_path)
     if(operation==DocumentOperationsEnum.ADD):
         shape.AddDependencyFn(toml_file_path,dependency_name,dependency_version)
