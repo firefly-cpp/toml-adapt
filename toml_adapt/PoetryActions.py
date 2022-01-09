@@ -22,6 +22,14 @@ def ChangePoetryDependency(toml_file_path:str,
     """
     Same as adding
     """
+    if(dependency_name=="ALL"):
+        def poetry(toml_full_dict: MutableMapping[str,Any]):
+            all_keys: list[str]=toml_full_dict["tool"]["poetry"]["dependencies"].keys()
+            for key in all_keys:
+                toml_full_dict["tool"]["poetry"]["dependencies"][key]=f"{dependency_version}"
+        TomlBaseManipulation(toml_file_path,poetry)
+        return
+    
     AddPoetryDependency(toml_file_path,dependency_name,dependency_version)
     
 def AddPoetryDevDependency(toml_file_path:str,

@@ -51,24 +51,27 @@ ignore_errors = true
 generate-setup-file = false
 
 [tool.poetry.dependencies]
-python = "^3.6"
-poetry-core = "^1.1.0a6"
-cachy = "^0.3.0"
-cleo = "^1.0.0a4"
-crashtest = "^0.3.0"
-entrypoints = "^0.3"
-html5lib = "^1.0"
-keyring = ">=21.2.0"
-packaging = "^20.4"
-pexpect = "^4.7.0"
-pkginfo = "^1.5"
-requests = "^2.18"
-requests-toolbelt = "^0.9.1"
-shellingham = "^1.1"
-tomlkit = ">=0.7.0,<1.0.0"
-virtualenv = "(>=20.4.3,<20.4.5 || >=20.4.7)"
-trying = "^1.1.1"
-automatic = "^9.9.9"
+python = "*"
+poetry-core = "*"
+cachy = "*"
+cleo = "*"
+crashtest = "*"
+entrypoints = "*"
+html5lib = "*"
+keyring = "*"
+packaging = "*"
+pexpect = "*"
+pkginfo = "*"
+requests = "*"
+requests-toolbelt = "*"
+shellingham = "*"
+tomlkit = "*"
+virtualenv = "*"
+trying = "*"
+automatic = "*"
+cachecontrol = "*"
+dataclasses = "*"
+importlib-metadata = "*"
 
 [tool.poetry.dev-dependencies]
 tox = "^3.18"
@@ -85,18 +88,6 @@ poetry = "poetry.console.application:main"
 
 [tool.coverage.report]
 exclude_lines = [ "pragma: no cover", "if TYPE_CHECKING:",]
-
-[tool.poetry.dependencies.cachecontrol]
-version = "^0.12.9"
-extras = [ "filecache",]
-
-[tool.poetry.dependencies.dataclasses]
-version = "^0.8"
-python = "<3.7"
-
-[tool.poetry.dependencies.importlib-metadata]
-version = "^1.6.0"
-python = "<3.8"
 
 [tool.poetry.dev-dependencies.pre-commit]
 version = "^2.6"
