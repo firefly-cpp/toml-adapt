@@ -19,24 +19,13 @@ def TomlAdapt(path: str,a: str,dep:str,ver: str):
         operation=DocumentOperationsEnum.ADD_DEV
     if(a=='remove-dev'):
         operation=DocumentOperationsEnum.REMOVE_DEV
-    if(a=='chance-dev'):
+    if(a=='change-dev'):
         operation=DocumentOperationsEnum.CHANGE_DEV
     DoOperation(operation,
                 path,
                 dep,
                 ver)
 
-#DoOperation(operation,
-#            toml_file_path="examples/Cargo.toml",
-#            dependency_name="testing777",
-#            dependency_version="1.1.1")
 
-#DoOperation(operation,
-#            toml_file_path="examples/poetry_pyproject.toml",
-#            dependency_name="testing777",
-#            dependency_version="1.1.1")
-
-#DoOperation(operation,
-#            toml_file_path="examples/flit_pyproject.toml",
-#            dependency_name="testing777",
-#            dependency_version="1.1.1")
+if __name__ == "__main__":
+    TomlAdapt()

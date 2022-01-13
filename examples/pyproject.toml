@@ -32,6 +32,7 @@ tcxreader = "^0.3.0"
 requests = "^2.25.1"
 niaaml = "^1.1.1"
 overpy = "^0.6"
+pytest = "*"
 
 [tool.poetry.dev-dependencies]
 Sphinx = "1.1.1"
@@ -39,3 +40,4 @@ sphinx-rtd-theme = "1.1.1"
 coveralls = "1.1.1"
 pytest = "1.2.1"
 interrogate = "1.1.1"
+doesntexist = "1.1.1"
