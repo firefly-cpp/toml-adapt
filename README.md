@@ -51,7 +51,23 @@ To install toml-adapt on Fedora, use:
 $ dnf install python-toml-adapt
 ```
 
-## Usage
+### Usage
+
+`-a` Available actions are:
+- add
+- remove
+- change
+- add-dev
+- remove-dev
+- change-dev
+
+`-path` Specifies the path to the TOML file you wish to edit.
+
+`-dep` This option sets the name of dependency you wish to manipulate. Reserved keyword `ALL` will instead do action on all dependencies. 
+
+`-ver` This option sets the version. With Python Poetry, there is reserved keyword `X`, which will become `*` (meaning it accepts any version of dependency).
+
+The following are examples of usage:
 
 ### Change dependency
 ```sh
