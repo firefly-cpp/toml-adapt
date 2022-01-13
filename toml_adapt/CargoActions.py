@@ -1,6 +1,6 @@
 from typing import Any, MutableMapping
 
-from Common import TomlBaseManipulation
+from toml_adapt.Common import TomlBaseManipulation
 
 
 def AddCargoDependency(toml_file_path:str,

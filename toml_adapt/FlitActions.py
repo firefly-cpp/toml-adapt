@@ -1,5 +1,5 @@
 from typing import Any, MutableMapping
-from Common import TomlBaseManipulation
+from toml_adapt.Common import TomlBaseManipulation
 
 def DependencyNameFromFullString(full_string: str)->str:
     """

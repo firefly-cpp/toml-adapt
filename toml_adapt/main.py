@@ -1,5 +1,5 @@
-from DocumentOperations import DocumentOperationsEnum
-from ManipulateToml import DoOperation
+from toml_adapt.DocumentOperations import DocumentOperationsEnum
+from toml_adapt.ManipulateToml import DoOperation
 import click
 
 @click.command()
@@ -25,9 +25,6 @@ def TomlAdapt(path: str,a: str,dep:str,ver: str):
                 path,
                 dep,
                 ver)
-
-if __name__ == '__main__':
-    TomlAdapt()
 
 #DoOperation(operation,
 #            toml_file_path="examples/Cargo.toml",
