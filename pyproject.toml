@@ -7,8 +7,8 @@ include = [ { path = "toml-adapt.1", format = "sdist" } ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-toml = "^0.10.2"
-click = "^8.0.3"
+toml = "*"
+click = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
