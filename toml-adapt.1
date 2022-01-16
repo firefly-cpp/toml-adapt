@@ -1,36 +1,80 @@
 .TH TOML\-ADAPT "1" "June 2021" "" "User Commands"
 .SH NAME
-toml\-adapt \- adapt TOML files
+toml\-adapt \- adapt toml files
 .SH SYNOPSIS
 .B toml\-adapt
-.RB [ \-h ]
-.RB [ \-path\ \fIPATH ]
-.RB [ \-a\  { change , add , remove }]
-.RB [ \-dep\ \fIDEP ]
-.RB [ \-ver\ \fIVER ]
+.RB [ \-\-help ]
+.RB [ \-path\ \fITEXT ]
+.RB [ \-path\ \fITEXT ]
+.RB [ \-dep\ \fITEXT ]
+.RB [ \-ver\ \fITEXT ]
 .SH DESCRIPTION
-This is a very simple package for manipulating toml format files.
-This is still a work in progress.
-Recent version of this package supports the manipulation of dependencies that
-are included in toml files.
+Working with TOML files is becoming inevitable
+during the package maintenance process in different ecosystems.
+Many times package maintainers must either
+change the version of dependency or
+add/remove dependencies when building their packages,
+due to the inconsistent base system.
+For example, solving this issue can be done either
+by using the provided patches or using sed commands.
+However, this may be slightly time-consuming and irritating.
+A very simple yet user-friendly command line interface
+was developed in order to make this process easier.
+.SS FEATURES
+CLI currently supports the following operations:
+.IP \(bu +4n
+adding/removing dependencies
+.IP \(bu +4n
+changing the  dependency version
+.IP \(bu +4n
+changing the dependency versions of all packages concurrently
+.IP \(bu +4n
+adding/removing/changing dev dependencies
+.SS "SUPPORTED PACKAGING TOOLS"
+The following packaging tools are currently supported by this software:
+.IP \(bu +4n
+.B poetry
+.IP \(bu +4n
+.B flit
+.IP \(bu +4n
+.B cargo
+.IP \(bu +4n
+.B julia
+(partly)
 .SH OPTIONS
 .TP
-.BR \-h ,\  \-\-help
-Show a help message and exit
+.BR \-\-help
+Show a help message and exit.
 .TP
-.B \-path\ \fIPATH
-Path to the
-.B .toml
-file
+.B \-path\ \fITEXT
+Specifies the path to the TOML file you wish to edit.
+.RI [ required ]
 .TP
-.BR \-a \ { change , add , remove }
-Select action
+.B \-a\ \fITEXT
+Action.
+Any of the following:
+.BR add ,
+.BR remove ,
+.BR change ,
+.BR add\-dev ,
+.BR remove\-dev ,
+.BR change\-dev .
+.RI [ required ]
 .TP
-.B \-dep\ \fIDEP
-Dependency name
+.B \-dep\ \fITEXT
+This option sets the name of dependency you wish to manipulate.
+Reserved keyword
+.B ALL
+will instead do action on all dependencies.
+.RI [ required ]
 .TP
-.B \-ver\ \fIVER
-Version of dependency
+.B \-ver\ \fITEXT
+This option sets the version.
+With Python Poetry, there is reserved keyword
+.BR X ,
+which will become
+.B *
+(meaning it accepts any version of dependency).
 .SH EXAMPLES
 .TP
 .B Change dependency
