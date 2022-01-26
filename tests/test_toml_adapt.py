@@ -1,5 +1,3 @@
-from msilib.schema import Error
-from tkinter import E
 from toml_adapt.PoetryActions import AddPoetryDependency, AddPoetryDevDependency, ChangePoetryDependency, ChangePoetryDevDependency, RemovePoetryDependency, RemovePoetryDevDependency
 import os
 
