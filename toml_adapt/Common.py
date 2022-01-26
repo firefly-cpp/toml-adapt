@@ -4,7 +4,7 @@ import toml
 def ManipulateFile(toml_file_path:str,
                    new_toml: MutableMapping[Any,Any]):
     try:
-        with open(toml_file_path, "w") as file:
+        with open(toml_file_path, "w", encoding="utf-8") as file:
             toml.dump(new_toml,file)
     except:
         pass
