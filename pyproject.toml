@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "toml-adapt"
-version = "0.2.3"
+version = "0.2.4"
 description = "A very simple cli for manipulating toml files."
 authors = ["iztokf <iztokf@fedoraproject.org>","Filip Strajnar <filip.strajnar@gmail.com>"]
 include = [ { path = "toml-adapt.1", format = "sdist" } ]
