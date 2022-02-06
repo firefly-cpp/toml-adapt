@@ -124,7 +124,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://www.iztok-jr-fister.eu/"><img src="https://avatars.githubusercontent.com/u/1633361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iztok Fister Jr.</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/StrajnarFilip"><img src="https://avatars.githubusercontent.com/u/46705237?v=4?s=100" width="100px;" alt=""/><br /><sub><b>StrajnarFilip</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Code">💻</a> <a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/StrajnarFilip"><img src="https://avatars.githubusercontent.com/u/46705237?v=4?s=100" width="100px;" alt=""/><br /><sub><b>StrajnarFilip</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Code">💻</a> <a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Tests">⚠️</a> <a href="#ideas-StrajnarFilip" title="Ideas, Planning, & Feedback">🤔</a> <a href="#example-StrajnarFilip" title="Examples">💡</a></td>
   </tr>
 </table>
 
