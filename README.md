@@ -1,7 +1,4 @@
 # toml-adapt --- Adapt toml files
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ---
 [![PyPI Version](https://img.shields.io/pypi/v/toml-adapt.svg)](https://pypi.python.org/pypi/)
@@ -11,7 +8,9 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/firefly-cpp/toml-adapt.svg)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/firefly-cpp/toml-adapt.svg)](http://isitmaintained.com/project/firefly-cpp/toml-adapt "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/firefly-cpp/toml-adapt.svg)](http://isitmaintained.com/project/firefly-cpp/toml-adapt "Percentage of issues still open")
-![GitHub contributors](https://img.shields.io/github/contributors/firefly-cpp/toml-adapt.svg)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 [![Fedora package](https://img.shields.io/fedora/v/python3-toml-adapt?color=blue&label=Fedora%20Linux&logo=fedora)](https://src.fedoraproject.org/rpms/python-toml-adapt)
 
 ## Description
