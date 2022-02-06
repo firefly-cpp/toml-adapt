@@ -18,6 +18,26 @@
         "mentoring",
         "doc"
       ]
+    },
+    {
+      "login": "StrajnarFilip",
+      "name": "StrajnarFilip",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46705237?v=4",
+      "profile": "https://github.com/StrajnarFilip",
+      "contributions": [
+        "code",
+        "test"
+      ]
+    },
+    {
+      "login": "musicinmybrain",
+      "name": "Ben Beasley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6898909?v=4",
+      "profile": "https://github.com/musicinmybrain",
+      "contributions": [
+        "doc",
+        "platform"
+      ]
     }
   ],
   "contributorsPerLine": 7,
