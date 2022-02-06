@@ -1,6 +1,6 @@
 # toml-adapt --- Adapt toml files
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ---
@@ -126,6 +126,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.iztok-jr-fister.eu/"><img src="https://avatars.githubusercontent.com/u/1633361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iztok Fister Jr.</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Code">💻</a> <a href="#platform-firefly-cpp" title="Packaging/porting to new platform">📦</a> <a href="#example-firefly-cpp" title="Examples">💡</a> <a href="#ideas-firefly-cpp" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-firefly-cpp" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/StrajnarFilip"><img src="https://avatars.githubusercontent.com/u/46705237?v=4?s=100" width="100px;" alt=""/><br /><sub><b>StrajnarFilip</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Code">💻</a> <a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Tests">⚠️</a> <a href="#ideas-StrajnarFilip" title="Ideas, Planning, & Feedback">🤔</a> <a href="#example-StrajnarFilip" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/musicinmybrain"><img src="https://avatars.githubusercontent.com/u/6898909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben Beasley</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=musicinmybrain" title="Documentation">📖</a> <a href="#platform-musicinmybrain" title="Packaging/porting to new platform">📦</a></td>
+    <td align="center"><a href="https://github.com/kloczek"><img src="https://avatars.githubusercontent.com/u/31284574?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tomasz Kłoczko</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/issues?q=author%3Akloczek" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
