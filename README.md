@@ -123,7 +123,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://www.iztok-jr-fister.eu/"><img src="https://avatars.githubusercontent.com/u/1633361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iztok Fister Jr.</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.iztok-jr-fister.eu/"><img src="https://avatars.githubusercontent.com/u/1633361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iztok Fister Jr.</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Code">💻</a> <a href="#platform-firefly-cpp" title="Packaging/porting to new platform">📦</a> <a href="#example-firefly-cpp" title="Examples">💡</a> <a href="#ideas-firefly-cpp" title="Ideas, Planning, & Feedback">🤔</a> <a href="#mentoring-firefly-cpp" title="Mentoring">🧑‍🏫</a> <a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Documentation">📖</a></td>
   </tr>
 </table>
 
