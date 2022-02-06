@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "firefly-cpp",
+      "name": "Iztok Fister Jr.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1633361?v=4",
+      "profile": "http://www.iztok-jr-fister.eu/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "toml-adapt",
+  "projectOwner": "firefly-cpp",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
