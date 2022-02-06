@@ -125,7 +125,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://www.iztok-jr-fister.eu/"><img src="https://avatars.githubusercontent.com/u/1633361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Iztok Fister Jr.</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=firefly-cpp" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/StrajnarFilip"><img src="https://avatars.githubusercontent.com/u/46705237?v=4?s=100" width="100px;" alt=""/><br /><sub><b>StrajnarFilip</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Code">💻</a> <a href="https://github.com/firefly-cpp/toml-adapt/commits?author=StrajnarFilip" title="Tests">⚠️</a></td>
-    <td align="center"><a href="https://github.com/musicinmybrain"><img src="https://avatars.githubusercontent.com/u/6898909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben Beasley</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=musicinmybrain" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/musicinmybrain"><img src="https://avatars.githubusercontent.com/u/6898909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben Beasley</b></sub></a><br /><a href="https://github.com/firefly-cpp/toml-adapt/commits?author=musicinmybrain" title="Documentation">📖</a> <a href="#platform-musicinmybrain" title="Packaging/porting to new platform">📦</a></td>
   </tr>
 </table>
 
