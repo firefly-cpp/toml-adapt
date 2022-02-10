@@ -4,6 +4,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/toml-adapt.svg)](https://pypi.python.org/pypi/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/toml-adapt.svg)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/toml-adapt.svg)
+[![Downloads](https://pepy.tech/badge/toml-adapt)](https://pepy.tech/project/toml-adapt)
 [![GitHub license](https://img.shields.io/github/license/firefly-cpp/toml-adapt.svg)](https://github.com/firefly-cpp/toml-adapt/blob/master/LICENSE)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/firefly-cpp/toml-adapt.svg)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/firefly-cpp/toml-adapt.svg)](http://isitmaintained.com/project/firefly-cpp/toml-adapt "Average time to resolve an issue")
