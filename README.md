@@ -52,6 +52,14 @@ To install toml-adapt on Fedora, use:
 $ dnf install python-toml-adapt
 ```
 
+### Alpine Linux
+
+To install toml-adapt on Alpine Linux, please enable Testing repository and use:
+
+```sh
+$ apk add toml-adapt
+```
+
 ### Usage
 
 `-a` Available actions are:
