@@ -14,11 +14,14 @@ def AddFlitDependency(toml_file_path:str,
     [tool.flit.metadata]
     """
     def flit(toml_full_dict: MutableMapping[str,Any]):
-        list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["tool"]["flit"]["metadata"]
-        if len(list(filter(lambda dep: dependency_name == DependencyNameFromFullString(dep),list_of_deps["requires"]))) > 0:
+        list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["project"]["dependencies"]
+        if len(list(filter(lambda dep: dependency_name == DependencyNameFromFullString(dep),list_of_deps))) > 0:
             print("Dependency already exists")
         else:
-            toml_full_dict["tool"]["flit"]["metadata"]["requires"].append(f"{dependency_name} {dependency_version}")
+            if dependency_version == "X":
+                toml_full_dict["project"]["dependencies"].append(dependency_name)
+            else:
+                toml_full_dict["project"]["dependencies"].append(f"{dependency_name} {dependency_version}")
     TomlBaseManipulation(toml_file_path,flit)
     
 def RemoveFlitDependency(toml_file_path:str,
@@ -27,8 +30,8 @@ def RemoveFlitDependency(toml_file_path:str,
     [tool.flit.metadata]
     """
     def flit(toml_full_dict: MutableMapping[str,Any]):
-        list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["tool"]["flit"]["metadata"]
-        list_of_deps["requires"]=list(filter(lambda dep: dependency_name != DependencyNameFromFullString(dep),list_of_deps["requires"]))
+        list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["project"]
+        list_of_deps["dependencies"]=list(filter(lambda dep: dependency_name != DependencyNameFromFullString(dep),list_of_deps["dependencies"]))
     TomlBaseManipulation(toml_file_path,flit)
     
 def ChangeFlitDependency(toml_file_path:str,
@@ -39,11 +42,11 @@ def ChangeFlitDependency(toml_file_path:str,
     """
     if(dependency_name=="ALL"):
         def flit(toml_full_dict: MutableMapping[str,Any]):
-            list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["tool"]["flit"]["metadata"]
-            list_of_deps["requires"]=list(map(lambda dep: f"{DependencyNameFromFullString(dep)} {dependency_version}",list_of_deps["requires"]))
+            list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["project"]["dependencies"]
+            list_of_deps["dependencies"]=list(map(lambda dep: DependencyNameFromFullString(dep) if dependency_version == "X" else f"{DependencyNameFromFullString(dep)} {dependency_version}",list_of_deps["dependencies"]))
         TomlBaseManipulation(toml_file_path,flit)
         return
     def flit(toml_full_dict: MutableMapping[str,Any]):
-        list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["tool"]["flit"]["metadata"]
-        list_of_deps["requires"]=list(map(lambda dep: f"{dependency_name} {dependency_version}" if dependency_name == DependencyNameFromFullString(dep) else dep,list_of_deps["requires"]))
+        list_of_deps: MutableMapping[str,list[str]]=toml_full_dict["project"]
+        list_of_deps["dependencies"]=list(map(lambda dep: (DependencyNameFromFullString(dep) if dependency_version == "X" else f"{dependency_name} {dependency_version}") if dependency_name == DependencyNameFromFullString(dep) else dep,list_of_deps["dependencies"]))
     TomlBaseManipulation(toml_file_path,flit)
