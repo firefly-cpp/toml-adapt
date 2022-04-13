@@ -11,7 +11,8 @@ def IsSpecificPythonTool(toml_file_path: str, tool_name:str):
     return False
 
 def IsFileFlit(toml_file_path: str) -> bool:
-    return IsSpecificPythonTool(toml_file_path,"flit")
+    toml_loaded: MutableMapping[str,Any]=toml.load(toml_file_path)
+    return toml_loaded["project"].keys().__contains__("dependencies")
 
 def IsFilePoetry(toml_file_path: str) -> bool:
     return IsSpecificPythonTool(toml_file_path,"poetry")
