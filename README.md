@@ -1,4 +1,4 @@
-# toml-adapt --- Adapt toml files
+# toml-adapt ---  A simple command-line interface (CLI) for manipulating toml files
 
 ---
 [![PyPI Version](https://img.shields.io/pypi/v/toml-adapt.svg)](https://pypi.python.org/pypi/)
