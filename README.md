@@ -54,7 +54,7 @@ $ dnf install python-toml-adapt
 
 ### Alpine Linux
 
-To install toml-adapt on Alpine Linux, please enable Testing repository and use:
+To install toml-adapt on Alpine Linux, use:
 
 ```sh
 $ apk add toml-adapt
