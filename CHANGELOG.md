@@ -2,7 +2,23 @@
 
 ## [Unreleased](https://github.com/firefly-cpp/toml-adapt/tree/HEAD)
 
-[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.6...HEAD)
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.8...HEAD)
+
+**Closed issues:**
+
+- Improve documentation [\#8](https://github.com/firefly-cpp/toml-adapt/issues/8)
+
+## [0.2.8](https://github.com/firefly-cpp/toml-adapt/tree/0.2.8) (2022-09-09)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.7...0.2.8)
+
+**Closed issues:**
+
+- Flit/Poetry problems [\#31](https://github.com/firefly-cpp/toml-adapt/issues/31)
+
+## [0.2.7](https://github.com/firefly-cpp/toml-adapt/tree/0.2.7) (2022-05-26)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.6...0.2.7)
 
 **Closed issues:**
 
