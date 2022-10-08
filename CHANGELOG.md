@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/firefly-cpp/toml-adapt/tree/HEAD)
+## [0.2.9](https://github.com/firefly-cpp/toml-adapt/tree/0.2.9) (2022-10-07)
 
-[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.8...HEAD)
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.8...0.2.9)
 
 **Closed issues:**
 
