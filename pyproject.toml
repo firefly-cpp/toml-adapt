@@ -2,7 +2,11 @@
 name = "toml-adapt"
 version = "0.2.9"
 description = "A simple command-line interface for manipulating toml files"
+license = "MIT"
 authors = ["Iztok Fister Jr. <iztok@iztok-jr-fister.eu>","Filip Strajnar <filip.strajnar@gmail.com>"]
+keywords = ['adaptation', 'data manipulation', 'flit', 'poetry', 'toml']
+homepage = "https://github.com/firefly-cpp/toml-adapt"
+repository = "https://github.com/firefly-cpp/toml-adapt"
 include = [ { path = "toml-adapt.1", format = "sdist" } ]
 readme = "README.md"
 
