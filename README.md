@@ -11,6 +11,7 @@
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/firefly-cpp/toml-adapt.svg)](http://isitmaintained.com/project/firefly-cpp/toml-adapt "Percentage of issues still open")
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 [![Fedora package](https://img.shields.io/fedora/v/python3-toml-adapt?color=blue&label=Fedora%20Linux&logo=fedora)](https://src.fedoraproject.org/rpms/python-toml-adapt)
+[![AUR package](https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/toml-adapt)
 
 ## Description
 Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this
@@ -58,6 +59,12 @@ To install toml-adapt on Alpine Linux, use:
 
 ```sh
 $ apk add toml-adapt
+```
+
+To install toml-adapt on Arch Linux, please use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers):
+
+```sh
+$ yay -Syyu toml-adapt
 ```
 
 ### Usage
