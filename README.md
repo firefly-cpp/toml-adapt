@@ -61,6 +61,8 @@ To install toml-adapt on Alpine Linux, use:
 $ apk add toml-adapt
 ```
 
+### Arch Linux
+
 To install toml-adapt on Arch Linux, please use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers):
 
 ```sh
