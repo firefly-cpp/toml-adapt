@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "toml-adapt"
-version = "0.2.10"
+version = "0.2.11"
 description = "A simple command-line interface for manipulating toml files"
 license = "MIT"
 authors = ["Iztok Fister Jr. <iztok@iztok-jr-fister.eu>","Filip Strajnar <filip.strajnar@gmail.com>"]
