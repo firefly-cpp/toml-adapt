@@ -12,6 +12,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 [![Fedora package](https://img.shields.io/fedora/v/python3-toml-adapt?color=blue&label=Fedora%20Linux&logo=fedora)](https://src.fedoraproject.org/rpms/python-toml-adapt)
 [![AUR package](https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/toml-adapt)
+[![Packaging status](https://repology.org/badge/tiny-repos/toml-adapt.svg)](https://repology.org/project/toml-adapt/versions)
 
 ## Description
 Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this
