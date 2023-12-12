@@ -14,11 +14,10 @@
 [![AUR package](https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/toml-adapt)
 [![Packaging status](https://repology.org/badge/tiny-repos/toml-adapt.svg)](https://repology.org/project/toml-adapt/versions)
 
-## Description
-Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this
-may be slightly time-consuming and irritating. A very simple yet user-friendly command line interface was developed in order to make this process easier.
+## Description 📋
+Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. 🌐 Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this may be slightly time-consuming and irritating. ⏳ A very simple yet user-friendly command line interface was developed in order to make this process easier. ⚙️📄🛠️
 
-### Features
+### Features 🚀
 
 CLI currently supports the following operations:
 
@@ -27,7 +26,7 @@ CLI currently supports the following operations:
 - changing the dependency versions of all packages concurrently
 - adding/removing/changing dev dependencies
 
-### Supported packaging tools
+### Supported packaging tools 🛠️
 
 The following packaging tools are currently supported by this software:
 
@@ -36,7 +35,7 @@ The following packaging tools are currently supported by this software:
 - cargo
 - julia (partly)
 
-## Installation
+## Installation 📦
 
 ### pip3
 
@@ -70,7 +69,7 @@ To install toml-adapt on Arch Linux, please use an [AUR helper](https://wiki.arc
 $ yay -Syyu toml-adapt
 ```
 
-### Usage
+## Usage
 
 `-a` Available actions are:
 - add
