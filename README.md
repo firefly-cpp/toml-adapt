@@ -15,6 +15,11 @@
 [![AUR package](https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/toml-adapt)
 [![Packaging status](https://repology.org/badge/tiny-repos/toml-adapt.svg)](https://repology.org/project/toml-adapt/versions)
 
+* **Free software:** MIT license
+* **Python versions:** 3.8.x, 3.9.x, 3.10.x, 3.11.x, 3.12.x
+* **Documentation:** https://toml-adapt.readthedocs.io/en/latest/
+* **Tested OS:** Windows, Ubuntu, Debian, Fedora, Alpine, Arch, macOS. **However, that does not mean it does not work on others.**
+
 ## Description 📋
 Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. 🌐 Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this may be slightly time-consuming and irritating. ⏳ A very simple yet user-friendly command line interface was developed in order to make this process easier. ⚙️📄🛠️
 

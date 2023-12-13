@@ -7,6 +7,7 @@ authors = ["Iztok Fister Jr. <iztok@iztok-jr-fister.eu>","Filip Strajnar <filip.
 keywords = ['adaptation', 'data manipulation', 'flit', 'poetry', 'toml']
 homepage = "https://github.com/firefly-cpp/toml-adapt"
 repository = "https://github.com/firefly-cpp/toml-adapt"
+documentation = "https://toml-adapt.readthedocs.io/en/latest/"
 include = [ { path = "toml-adapt.1", format = "sdist" } ]
 readme = "README.md"
 
