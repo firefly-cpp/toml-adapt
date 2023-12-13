@@ -4,6 +4,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/toml-adapt.svg)](https://pypi.python.org/pypi/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/toml-adapt.svg)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/toml-adapt.svg)
+[![Documentation Status](https://readthedocs.org/projects/toml-adapt/badge/?version=latest)](https://toml-adapt.readthedocs.io/en/latest/?badge=latest)
 [![Downloads](https://pepy.tech/badge/toml-adapt)](https://pepy.tech/project/toml-adapt)
 [![GitHub license](https://img.shields.io/github/license/firefly-cpp/toml-adapt.svg)](https://github.com/firefly-cpp/toml-adapt/blob/master/LICENSE)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/firefly-cpp/toml-adapt.svg)
@@ -39,10 +40,10 @@ The following packaging tools are currently supported by this software:
 
 ### pip3
 
-Install toml-adapt with pip3:
+Install toml-adapt with pip:
 
 ```sh
-pip3 install toml-adapt
+pip install toml-adapt
 ```
 
 ### Fedora Linux

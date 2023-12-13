@@ -12,3 +12,4 @@ Contributors
 
 * Filip Strajnar
 * Benjamin A. Beasley
+* Tadej Lahovnik
