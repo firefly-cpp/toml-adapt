@@ -58,6 +58,16 @@
       "contributions": [
         "platform"
       ]
+    },
+    {
+      "login": "lahovniktadej",
+      "name": "Tadej Lahovnik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57890734?v=4",
+      "profile": "https://github.com/lahovniktadej",
+      "contributions": [
+        "doc",
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -66,5 +76,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
