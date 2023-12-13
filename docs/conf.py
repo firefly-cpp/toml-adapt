@@ -22,7 +22,7 @@ copyright = '2023, Iztok Fister Jr., Filip Strajnar'
 author = 'Iztok Fister Jr., Filip Strajnar'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.12'
+release = '0.3.0'
 
 # -- General configuration ---------------------------------------------------
 

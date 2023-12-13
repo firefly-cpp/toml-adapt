@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "toml-adapt"
-version = "0.2.12"
+version = "0.3.0"
 description = "A simple command-line interface for manipulating toml files"
 license = "MIT"
 authors = ["Iztok Fister Jr. <iztok@iztok-jr-fister.eu>","Filip Strajnar <filip.strajnar@gmail.com>"]
@@ -15,14 +15,14 @@ readme = "README.md"
 python = "^3.6"
 toml = "*"
 click = "*"
-sphinx = {version = "^4.4.0", extras = ["docs"]}
-sphinx-rtd-theme = {version = "^1.0.0", extras = ["docs"]}
 
 [tool.poetry.extras]
 docs = ["Sphinx", "sphinx-rtd-theme"]
 
 [tool.poetry.dev-dependencies]
 pytest = ">=6.2.5"
+sphinx = {version = "^4.4.0", extras = ["docs"]}
+sphinx-rtd-theme = {version = "^1.0.0", extras = ["docs"]}
 
 [build-system]
 requires = ["poetry-core"]
