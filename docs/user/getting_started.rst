@@ -10,7 +10,7 @@ To install the toml-adapt package, run the following command:
 
 .. code:: bash
 
-    pip3 install toml-adapt
+    pip install toml-adapt
 
 Usage
 -----
