@@ -1,0 +1,17 @@
+authors:
+- family-names: Fister, Jr.
+  given-names: Iztok
+  orcid: 0000-0002-6418-1272
+- family-names: Strajnar
+  given-names: Filip
+- family-names: Beasley
+  given-names: Ben
+cff-version: 1.2.0
+date-released: '2024-01-07'
+doi: 10.5281/zenodo.10467167
+license:
+- mit
+repository-code: https://github.com/firefly-cpp/toml-adapt/tree/0.3.1
+title: 'firefly-cpp/toml-adapt: 0.3.1'
+type: software
+version: 0.3.1

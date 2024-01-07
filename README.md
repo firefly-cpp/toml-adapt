@@ -14,6 +14,7 @@
 [![Fedora package](https://img.shields.io/fedora/v/python3-toml-adapt?color=blue&label=Fedora%20Linux&logo=fedora)](https://src.fedoraproject.org/rpms/python-toml-adapt)
 [![AUR package](https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/toml-adapt)
 [![Packaging status](https://repology.org/badge/tiny-repos/toml-adapt.svg)](https://repology.org/project/toml-adapt/versions)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10467167.svg)](https://doi.org/10.5281/zenodo.10467167)
 
 * **Free software:** MIT license
 * **Python versions:** 3.8.x, 3.9.x, 3.10.x, 3.11.x, 3.12.x
@@ -126,6 +127,10 @@ X represents a *
 	
 toml-adapt -path pyproject.toml -a change -dep ALL -ver X
 ```
+
+## Cite us
+
+Fister, Jr., I., & Strajnar, F. (2024). firefly-cpp/toml-adapt: 0.3.1 (0.3.1). Zenodo. [https://doi.org/10.5281/zenodo.10467167](https://doi.org/10.5281/zenodo.10467167)
 
 ## License
 
