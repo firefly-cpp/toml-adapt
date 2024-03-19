@@ -27,4 +27,4 @@ __all__ = [
 ]
 
 __project__ = "toml_adapt"
-__version__ = '0.3.0'
+__version__ = '0.3.3'
