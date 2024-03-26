@@ -1,5 +1,52 @@
 # Changelog
 
+## [0.3.3](https://github.com/firefly-cpp/toml-adapt/tree/0.3.3) (2024-03-19)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.3.2...0.3.3)
+
+## [0.3.2](https://github.com/firefly-cpp/toml-adapt/tree/0.3.2) (2024-01-07)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.3.1...0.3.2)
+
+## [0.3.1](https://github.com/firefly-cpp/toml-adapt/tree/0.3.1) (2023-12-14)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.3.0...0.3.1)
+
+## [0.3.0](https://github.com/firefly-cpp/toml-adapt/tree/0.3.0) (2023-12-13)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.12...0.3.0)
+
+**Merged pull requests:**
+
+- docs: add lahovniktadej as a contributor for doc, and tutorial [\#38](https://github.com/firefly-cpp/toml-adapt/pull/38) ([allcontributors[bot]](https://github.com/apps/allcontributors))
+- Documentation [\#37](https://github.com/firefly-cpp/toml-adapt/pull/37) ([lahovniktadej](https://github.com/lahovniktadej))
+
+## [0.2.12](https://github.com/firefly-cpp/toml-adapt/tree/0.2.12) (2023-11-13)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.11...0.2.12)
+
+**Merged pull requests:**
+
+- new workflow [\#36](https://github.com/firefly-cpp/toml-adapt/pull/36) ([firefly-cpp](https://github.com/firefly-cpp))
+
+## [0.2.11](https://github.com/firefly-cpp/toml-adapt/tree/0.2.11) (2023-02-22)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.10...0.2.11)
+
+**Closed issues:**
+
+- Add Linux Arch badge [\#33](https://github.com/firefly-cpp/toml-adapt/issues/33)
+- all-contributors [\#32](https://github.com/firefly-cpp/toml-adapt/issues/32)
+
+**Merged pull requests:**
+
+- docs: add carlosal1015 as a contributor for platform [\#35](https://github.com/firefly-cpp/toml-adapt/pull/35) ([allcontributors[bot]](https://github.com/apps/allcontributors))
+- Add instructions for install toml-adapt in Arch Linux [\#34](https://github.com/firefly-cpp/toml-adapt/pull/34) ([carlosal1015](https://github.com/carlosal1015))
+
+## [0.2.10](https://github.com/firefly-cpp/toml-adapt/tree/0.2.10) (2022-11-01)
+
+[Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.9...0.2.10)
+
 ## [0.2.9](https://github.com/firefly-cpp/toml-adapt/tree/0.2.9) (2022-10-07)
 
 [Full Changelog](https://github.com/firefly-cpp/toml-adapt/compare/0.2.8...0.2.9)
