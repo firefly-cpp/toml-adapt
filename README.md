@@ -1,30 +1,77 @@
-# toml-adapt ---  A simple command-line interface (CLI) for manipulating toml files
+<h1 align="center">
+  toml-adapt
+</h1>
 
----
-[![PyPI Version](https://img.shields.io/pypi/v/toml-adapt.svg)](https://pypi.python.org/pypi/)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/toml-adapt.svg)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/toml-adapt.svg)
-[![Documentation Status](https://readthedocs.org/projects/toml-adapt/badge/?version=latest)](https://toml-adapt.readthedocs.io/en/latest/?badge=latest)
-[![Downloads](https://pepy.tech/badge/toml-adapt)](https://pepy.tech/project/toml-adapt)
-[![GitHub license](https://img.shields.io/github/license/firefly-cpp/toml-adapt.svg)](https://github.com/firefly-cpp/toml-adapt/blob/master/LICENSE)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/firefly-cpp/toml-adapt.svg)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/firefly-cpp/toml-adapt.svg)](http://isitmaintained.com/project/firefly-cpp/toml-adapt "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/firefly-cpp/toml-adapt.svg)](http://isitmaintained.com/project/firefly-cpp/toml-adapt "Percentage of issues still open")
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-[![Fedora package](https://img.shields.io/fedora/v/python3-toml-adapt?color=blue&label=Fedora%20Linux&logo=fedora)](https://src.fedoraproject.org/rpms/python-toml-adapt)
-[![AUR package](https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux)](https://aur.archlinux.org/packages/toml-adapt)
-[![Packaging status](https://repology.org/badge/tiny-repos/toml-adapt.svg)](https://repology.org/project/toml-adapt/versions)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10467167.svg)](https://doi.org/10.5281/zenodo.10467167)
+<h2 align="center">
+  A simple command-line interface (CLI) for manipulating toml files
+</h2>
+
+<p align="center">
+  <a href="https://pypi.python.org/pypi">
+    <img alt="PyPI Version" src="https://img.shields.io/pypi/v/toml-adapt.svg">
+  </a>
+  <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/toml-adapt.svg">
+  <img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/toml-adapt.svg">
+  <a href="https://repology.org/project/toml-adapt/versions">
+    <img alt="Packaging status" src="https://repology.org/badge/tiny-repos/toml-adapt.svg">
+  </a>
+  <a href="https://src.fedoraproject.org/rpms/python-toml-adapt">
+    <img alt="Fedora package" src="https://img.shields.io/fedora/v/python3-toml-adapt?color=blue&label=Fedora%20Linux&logo=fedora">
+  </a>
+  <a href="https://aur.archlinux.org/packages/toml-adapt">
+    <img alt="AUR package" src="https://img.shields.io/aur/version/toml-adapt?color=blue&label=Arch%20Linux&logo=arch-linux">
+  </a>
+  <a href="https://pepy.tech/project/toml-adapt">
+    <img alt="Downloads" src="https://pepy.tech/badge/toml-adapt">
+  </a>
+  <a href="https://github.com/firefly-cpp/toml-adapt/blob/master/LICENSE">
+    <img alt="GitHub license" src="https://img.shields.io/github/license/firefly-cpp/toml-adapt.svg">
+  </a>
+  <a href="https://github.com/firefly-cpp/toml-adapt/actions/workflows/python-app.yml">
+    <img alt="GitHub Actions" src="https://github.com/firefly-cpp/toml-adapt/actions/workflows/python-app.yml/badge.svg">
+  </a>
+  <a href="https://toml-adapt.readthedocs.io/en/latest/?badge=latest">
+    <img alt="Documentation Status" src="https://readthedocs.org/projects/toml-adapt/badge/?version=latest">
+  </a>
+</p>
+
+<p align="center">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/w/firefly-cpp/toml-adapt.svg">
+  <a href='http://isitmaintained.com/project/firefly-cpp/toml-adapt "Average time to resolve an issue"'>
+    <img alt="Average time to resolve an issue" src="http://isitmaintained.com/badge/resolution/firefly-cpp/toml-adapt.svg">
+  </a>
+  <a href='http://isitmaintained.com/project/firefly-cpp/toml-adapt "Percentage of issues still open"'>
+    <img alt="Percentage of issues still open" src="http://isitmaintained.com/badge/open/firefly-cpp/toml-adapt.svg">
+  </a>
+  <a href="#-contributors">
+    <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-4-orange.svg">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.10467167">
+    <img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.10467167.svg">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#-features">🚀 Features</a> •
+  <a href="#️-supported-packaging-tools">🛠️ Supported packaging tools</a> •
+  <a href="#-installation">📦 Installation</a> •
+  <a href="#-usage">🚀 Usage</a> •
+  <a href="#-cite-us">📄 Cite us</a> •
+  <a href="#-license">🔑 License</a> •
+  <a href="#-contributors">✨ Contributors</a>
+</p>
+
+Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. 🌐 Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this may be slightly time-consuming and irritating. ⏳ A very simple yet user-friendly command line interface was developed in order to make this process easier. ⚙️📄🛠️
 
 * **Free software:** MIT license
 * **Python versions:** 3.8.x, 3.9.x, 3.10.x, 3.11.x, 3.12.x
-* **Documentation:** https://toml-adapt.readthedocs.io/en/latest/
+* **Documentation:** https://toml-adapt.readthedocs.io/en/latest
 * **Tested OS:** Windows, Ubuntu, Debian, Fedora, Alpine, Arch, macOS. **However, that does not mean it does not work on others.**
 
-## Description 📋
-Working with TOML files is becoming inevitable during the package maintenance process in different ecosystems. 🌐 Many times package maintainers must either change the version of dependency or add/remove dependencies when building their packages, due to the inconsistent base system. For example, solving this issue can be done either by using the provided patches or using sed commands. However, this may be slightly time-consuming and irritating. ⏳ A very simple yet user-friendly command line interface was developed in order to make this process easier. ⚙️📄🛠️
-
-### Features 🚀
+## 🚀 Features
 
 CLI currently supports the following operations:
 
@@ -33,7 +80,7 @@ CLI currently supports the following operations:
 - changing the dependency versions of all packages concurrently
 - adding/removing/changing dev dependencies
 
-### Supported packaging tools 🛠️
+## 🛠️ Supported packaging tools
 
 The following packaging tools are currently supported by this software:
 
@@ -42,11 +89,11 @@ The following packaging tools are currently supported by this software:
 - cargo
 - julia (partly)
 
-## Installation 📦
+## 📦 Installation
 
 ### pip3
 
-Install toml-adapt with pip:
+To install `toml-adapt` with pip, use:
 
 ```sh
 pip install toml-adapt
@@ -54,7 +101,7 @@ pip install toml-adapt
 
 ### Fedora Linux
 
-To install toml-adapt on Fedora, use:
+To install `toml-adapt` on Fedora, use:
 
 ```sh
 $ dnf install python-toml-adapt
@@ -62,7 +109,7 @@ $ dnf install python-toml-adapt
 
 ### Alpine Linux
 
-To install toml-adapt on Alpine Linux, use:
+To install `toml-adapt` on Alpine Linux, use:
 
 ```sh
 $ apk add toml-adapt
@@ -70,13 +117,13 @@ $ apk add toml-adapt
 
 ### Arch Linux
 
-To install toml-adapt on Arch Linux, please use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers):
+To install `toml-adapt` on Arch Linux, use an [AUR helper](https://wiki.archlinux.org/title/AUR_helpers):
 
 ```sh
 $ yay -Syyu toml-adapt
 ```
 
-## Usage
+## 🚀 Usage
 
 `-a` Available actions are:
 - add
@@ -128,11 +175,11 @@ X represents a *
 toml-adapt -path pyproject.toml -a change -dep ALL -ver X
 ```
 
-## Cite us
+## 📄 Cite us
 
 Fister, Jr., I., & Strajnar, F. (2024). firefly-cpp/toml-adapt: 0.3.1 (0.3.1). Zenodo. [https://doi.org/10.5281/zenodo.10467167](https://doi.org/10.5281/zenodo.10467167)
 
-## License
+## 🔑 License
 
 This package is distributed under the MIT License. This license can be found online at <http://www.opensource.org/licenses/MIT>.
 
@@ -140,7 +187,7 @@ This package is distributed under the MIT License. This license can be found onl
 
 This framework is provided as-is, and there are no guarantees that it fits your purposes or that it is bug-free. Use it at your own risk!
 
-## Contributors ✨
+## ✨ Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
