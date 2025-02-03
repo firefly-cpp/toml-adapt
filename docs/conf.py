@@ -18,11 +18,11 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'toml-adapt'
-copyright = '2024, Iztok Fister Jr., Filip Strajnar'
+copyright = '2025, Iztok Fister Jr., Filip Strajnar'
 author = 'Iztok Fister Jr., Filip Strajnar'
 
 # The full version, including alpha/beta/rc tags
-release = '0.3.3'
+release = '0.3.4'
 
 # -- General configuration ---------------------------------------------------
 
