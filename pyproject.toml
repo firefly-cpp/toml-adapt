@@ -12,7 +12,7 @@ include = [ { path = "toml-adapt.1", format = "sdist" } ]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.10"
 toml = "*"
 click = "*"
 
